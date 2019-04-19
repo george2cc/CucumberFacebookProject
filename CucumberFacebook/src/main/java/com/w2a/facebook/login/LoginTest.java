@@ -2,11 +2,18 @@ package com.w2a.facebook.login;
 
 import com.w2a.facebook.core.WebConnector;
 
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 //step file
 public class LoginTest {
+	
+	@After
+	public void closeBroser() {
+		System.out.println("closes browser");
+	
+	}
 	
 	WebConnector selenium = new WebConnector();
 	
@@ -39,6 +46,7 @@ public class LoginTest {
 	public void login_should_be_a(String expectedResult) throws Throwable {
 
 		System.out.println("Login is "+ expectedResult);
+		closeBroser();
 	}
 
 }
