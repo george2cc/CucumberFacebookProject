@@ -12,7 +12,7 @@ public class LoginTest {
 	@After
 	public void closeBroser() {
 		System.out.println("closes browser");
-	
+	// adding new comment 3 to test for cloning
 	}
 	
 	WebConnector selenium = new WebConnector();
@@ -30,8 +30,6 @@ public class LoginTest {
 		
 		System.out.println("Entering in " +locator+"as"+ value);
 		selenium.type(locator, value);
-		
-
 	}
 
 	@Given("^I click on \"([^\"]*)\"$")
@@ -39,12 +37,10 @@ public class LoginTest {
 		
 		System.out.println("Entering in " +object);
 		selenium.click(object);
-
 	}
 
 	@Then("^login should be a \"([^\"]*)\"$")
 	public void login_should_be_a(String expectedResult) throws Throwable {
-
 		System.out.println("Login is "+ expectedResult);
 		closeBroser();
 	}
